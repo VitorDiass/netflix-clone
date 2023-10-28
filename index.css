@@ -27,7 +27,7 @@ root {
     font-weight: 400;
 }
 
-html{
+html {
     font-size: 15px;
 }
 
@@ -72,7 +72,7 @@ html{
         gap: 1.5rem;
     }
 
-/*     .nav_right select {
+    /*     .nav_right select {
         padding: 0.25rem 1rem;
         background-color: rgba(22, 22, 22, 0.7);
         border-radius: 0.25rem;
@@ -93,7 +93,7 @@ html{
         border: 1px solid var(--color-midgray);
 
         .select {
-            
+
             font-size: 1rem;
             -webkit-appearance: none;
             -moz-appearance: none;
@@ -120,7 +120,7 @@ html{
             outline: none;
         }
     }
-    
+
 
     .nav_right .login button {
         color: var(--color-white);
@@ -161,37 +161,37 @@ html{
 
     .main_form {
         margin: 1.5rem 0 0;
-        
+
         .form_text {
             font-size: 1.25rem;
             font-weight: 400;
             line-height: 1.5;
-         
+
         }
-        
-        .form{
-            margin:1rem 0 0 ;
+
+        .form {
+            margin: 1rem 0 0;
             display: flex;
         }
 
-        .form_input{
-            flex-grow: 1;            
+        .form_input {
+            flex-grow: 1;
             background-color: rgba(22, 22, 22, 0.7);
-            border: 1px solid  rgba(128, 128, 128, 0.7);
+            border: 1px solid rgba(128, 128, 128, 0.7);
             border-radius: 0.25rem;
-            font-size: 1rem; 
-            color:var(--color-white);
+            font-size: 1rem;
+            color: var(--color-white);
             padding: 1.4rem;
         }
 
-       /*  input::placeholder{
+        /*  input::placeholder{
             color: white;
         } */
-    
 
-        .start_button{
+
+        .start_button {
             background-color: var(--color-red);
-            color : var(--color-white);
+            color: var(--color-white);
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -205,20 +205,50 @@ html{
             min-height: 3.5rem;
         }
 
-        .start_button:hover{
+        .start_button:hover {
             background-color: var(--color-red-hover);
         }
     }
-    
+
 }
 
-.divider{
+.divider {
     height: 7px;
     width: 100%;
     background-color: var(--color-black);
 }
 
-.section_1{
+h2 {
+    line-height: 4rem;
+    font-size: 3rem;
+    font-weight: 900;
+    max-width: 90%;
+}
+
+p {
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1rem 0 0;
+}
+
+.img {
+    position: relative;
+}
+
+.video {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    max-width: 73%;
+    max-height: 54%;
+    top: 48%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+}
+
+.section {
     background-color: black;
     display: flex;
     align-items: center;
@@ -226,50 +256,62 @@ html{
     /* justify-content: center; */
     color: var(--color-white);
 
-    .inner{
+
+
+
+    .inner {
         max-width: calc(66.6% - 6rem);
-        margin:auto;
+        margin: auto;
         display: flex;
         align-items: center;
-        .left{
+
+        .left {
             flex-basis: 50%;
+            position: relative;
+        }
+
+        .boxshot{
+            position: absolute;
+            left: 50%;
+            bottom: 8%;
+            transform: translate(-50%);
+            width: 50%;
+            min-width: 15rem;
+            background-color: black;
+            border: 2px solid rgba(128, 128, 128, 0.7);;
+            box-shadow: 0 0 2rem 0 black;
+            border-radius: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             
-        }
-        .left h2{
-            line-height: 4rem;
-            font-size: 3rem;
-            font-weight: 900;
-        }
-        .left p{
-            line-height: 2rem;
-            font-size: 1.5rem;
-            font-weight: 400;
-            margin: 1rem 0 0;
+            .text_boxshot{
+                display: flex;
+                flex-direction: column;
+                gap: 0.3rem;
+                flex-grow: 1;
+
+                .download {
+                    color: #0071eb;
+                    font-size: 0.875rem;
+                }
+            }
+            .download_gif{
+                background: url("/public/images/download-icon.gif") center center no-repeat;
+                height: 3.75rem;
+                width: 3rem;
+                display: block;
+                background-size: 100%;
+            }
         }
 
         .right {
             max-width: 50%;
             position: relative;
-
-            .img{
-                position: relative;
-                
-            }
-
-            .video_wrapper{
-                overflow: hidden;
-                position: absolute;
-                top: 0;
-                left:0;
-                max-width: 73%;
-                max-height: 54%;
-                top:46%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-            }
-            .video {
-            }
         }
+
+
     }
 }
 
